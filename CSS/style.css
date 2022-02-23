@@ -1,0 +1,158 @@
+/* Overwrite Browser Default CSS */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: 'Product Sans', sans-serif; 
+    letter-spacing: 1px;
+
+    --primary-color: 210, 210, 210;
+    --secondary-color: 100, 100, 100;
+    --theme-color: 255, 60, 120;
+    --bg-color: rgba(13, 13, 13, 1);
+    --transition-speed-1: 350ms;
+    --transition-speed-2: 500ms;
+}
+:root {
+    font-size: calc(8px + (16 - 10) * ((100vw - 320px) / (1360 - 320)));
+}
+
+body::-webkit-scrollbar       { width: 0.25rem; }                /*  the entire scrollbar. */
+body::-webkit-scrollbar-track { background: rgb(30, 30, 36); } /* the track (progress bar) of the scrollbar */
+body::-webkit-scrollbar-thumb { background: var(--grey-white); } /* the draggable scrolling handle. */
+
+html { 
+    color: rgba(var(--secondary-color), 1); 
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+ion-icon { font-size: 1rem; }
+ul { list-style: none; }
+a { 
+    text-decoration: none; 
+    color: rgba(var(--secondary-color), 1); 
+    transition: var(--transition-speed-1); 
+}
+a:hover { color: rgba(var(--primary-color), 1); }
+
+/* Header & Footer Container CSS */
+header, footer {
+    position: fixed;
+    width: 88vw;
+    left: 6vw;
+}
+header { top: 3rem; }
+footer { bottom: 3rem; }
+
+/* Header & Footer CSS */
+header nav, footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    z-index: 1;
+}
+
+/* Menu Button CSS */
+header .menu {
+    border: 2px solid rgba(var(--secondary-color), 1);
+    transition: var(--transition-speed-2);
+}
+header .menu:hover {
+    cursor: pointer;
+    border: 2px solid rgba(var(--primary-color), 1);
+}
+header .menu-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.25rem;
+}
+.bar1, .bar2, .bar3 {
+    width: 100%;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: rgba(var(--primary-color), 1);
+    transition: 0.4s ease-in-out;
+}
+.toggle .bar1 {
+    transform: rotatez(45deg) translate(0px, 5px);
+    width:60%;
+}
+.toggle .bar2 {
+    transform: rotatez(-45deg);
+}
+.toggle .bar3 {
+    position: relative;
+    float: right;
+    transform: rotatez(45deg) translate(0px, -5px);
+    width:60%;
+}
+
+/* Dropdown CSS */
+header .toggle .dropdown {
+    height: 100%;
+}
+/* Dropdown CSS */
+header .dropdown {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+}
+header .toggle .dropdown {
+    height: 360px;;
+}
+header .dropdown li {
+    display: flex;
+    justify-content: center;
+}
+header .dropdown a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    color: rgba(var(--theme-color), 1);
+}
+header.toggle > .dropdown {
+    height: 360px;
+}
+
+/* Footer CSS */
+footer .copyright {
+    user-select: none;
+}
+footer .social {
+    display: flex;
+    gap: 3.75rem;
+}
+footer .social p {
+    position: relative;
+}
+footer .social p:after {
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    top: 20px;
+    content: "";
+    background-color: rgba(var(--theme-color), 1);
+    transition: var(--transition-speed-1);
+}
+footer .social p:hover:after {
+    width: 100%;
+}

@@ -1,0 +1,98 @@
+html { overflow-y: hidden; }
+
+/* Slideshow CSS */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.slideshow .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slideshow .hero-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31vw;
+    height: 31vw;
+    border-radius: 50%;
+    border: 0.375rem solid rgba(var(--theme-color), 0.8);
+}
+.slideshow .hero-circle img {
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slideshow .captions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    font-weight: bold;
+    color: rgba(var(--primary-color), 0.8);
+    z-index: 1;
+}
+.slideshow .title h {
+    font-size: calc(0.875rem + 9.6vw);
+}
+@media screen and (max-width: 1360px) {
+    .slideshow .hero-circle {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+/* Arrow Buttons CSS*/
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+.arrows > a {
+    padding: 1.5rem 1.5rem 1.5rem 1.25rem;
+    color: rgba(var(--primary-color), 1);
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition-speed-1);
+}
+.arrows > a:hover { background-color: rgba(var(--theme-color), 1); }
+.arrows .next { border-radius: 0.375rem 0 0 0.375rem; }
+.arrows .prev { border-radius: 0 0.375rem 0.375rem 0; }
+
+/* Dots CSS */
+.dot-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    position: absolute;
+    bottom: 3rem;
+    z-index: 1;
+}
+.dot-nav > a {
+    cursor: pointer;
+    height: 0.5rem;
+    width: 0.5rem;
+    margin: calc(0.875rem - 0.5rem);
+    border-radius: 50%;
+    border: 1px solid rgba(var(--secondary-color), 1) ;
+    transition: background-color var(--transition-speed-1);
+}
+.dot-nav a.active {
+    border: 1px solid rgba(var(--primary-color), 1);
+    background-color: rgba(var(--primary-color), 1);
+    transform: scale(2);
+}
+.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1) ; }

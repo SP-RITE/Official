@@ -1,4 +1,7 @@
-html { overflow-y: hidden; }
+body {
+    width: 100vw;
+    left: 0;
+}
 
 /* Slideshow CSS */
 .slideshow-container {
@@ -45,12 +48,6 @@ html { overflow-y: hidden; }
 .slideshow .title h {
     font-size: calc(0.875rem + 9.6vw);
 }
-@media screen and (max-width: 1360px) {
-    .slideshow .hero-circle {
-        width: 450px;
-        height: 450px;
-    }
-}
 
 /* Arrow Buttons CSS*/
 .arrows {
@@ -68,9 +65,15 @@ html { overflow-y: hidden; }
     cursor: pointer;
     transition: var(--transition-speed-1);
 }
-.arrows > a:hover { background-color: rgba(var(--theme-color), 1); }
-.arrows .next { border-radius: 0.375rem 0 0 0.375rem; }
-.arrows .prev { border-radius: 0 0.375rem 0.375rem 0; }
+.arrows > a:hover { 
+    background-color: rgba(var(--theme-color), 1); 
+}
+.arrows .next { 
+    border-radius: 0.375rem 0 0 0.375rem; 
+}
+.arrows .prev { 
+    border-radius: 0 0.375rem 0.375rem 0; 
+}
 
 /* Dots CSS */
 .dot-nav {
@@ -78,7 +81,7 @@ html { overflow-y: hidden; }
     justify-content: center;
     gap: 1.5rem;
     position: absolute;
-    bottom: 3rem;
+    bottom: calc(3rem + 0.5rem);
     z-index: 1;
 }
 .dot-nav > a {
@@ -95,4 +98,20 @@ html { overflow-y: hidden; }
     background-color: rgba(var(--primary-color), 1);
     transform: scale(2);
 }
-.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1) ; }
+.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1); }
+
+@media screen and (max-width: 1360px) {
+    .slideshow .hero-circle {
+        width: 415px;
+        height: 415px;
+    }
+    .slideshow .captions {
+        bottom: calc(8rem + 10vh);
+    }
+    .slideshow .title h {
+        font-size: calc(8rem);
+    }
+    .dot-nav {
+        bottom: none;
+    }
+}

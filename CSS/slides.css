@@ -1,19 +1,8 @@
-body {
-    width: 100vw;
-    left: 0;
-}
-
-/* Slideshow CSS */
-.slideshow-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
 .slideshow {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
     height: 100vh;
 }
 .slideshow .content {
@@ -46,7 +35,7 @@ body {
     z-index: 1;
 }
 .slideshow .title h {
-    font-size: calc(0.875rem + 9.6vw);
+    font-size: calc(2.5rem + 9.6vw);
 }
 
 /* Arrow Buttons CSS*/
@@ -91,14 +80,16 @@ body {
     margin: calc(0.875rem - 0.5rem);
     border-radius: 50%;
     border: 1px solid rgba(var(--secondary-color), 1) ;
-    transition: background-color var(--transition-speed-1);
+    transition: var(--transition-speed-1);
 }
 .dot-nav a.active {
-    border: 1px solid rgba(var(--primary-color), 1);
+    border: 1px solid rgba(var(--secondary-color), 1);
     background-color: rgba(var(--primary-color), 1);
     transform: scale(2);
 }
-.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1); }
+.dot-nav a:hover, .dot-nav a.active:hover { 
+    border: 1px solid rgba(var(--primary-color), 1); 
+}
 
 @media screen and (max-width: 1360px) {
     .slideshow .hero-circle {

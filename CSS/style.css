@@ -5,11 +5,8 @@
     box-sizing: border-box;
 }
 
+/* Root Variables */
 :root {
-    font-size: 16px;
-    font-family: 'Product Sans', sans-serif; 
-    letter-spacing: 1px;
-
     --primary-color: 210, 210, 210;
     --secondary-color: 100, 100, 100;
     --theme-color: 255, 60, 120;
@@ -21,38 +18,38 @@
     font-size: calc(8px + (16 - 10) * ((100vw - 320px) / (1360 - 320)));
 }
 
-html, header, body, footer { width: 100%; }
+/* Text Sizing */
+h1 { font-size: 2.5rem;  }
+h2 { font-size: 2rem;    }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem;  }
+h5 { font-size: 1.25rem; }
+h5 { font-size: 1rem;    }
+p  { font-size: 1rem;    }
 
+/* Listing CSS */
+ul { list-style: none; }
+
+/* Scrollbar CSS */
 body::-webkit-scrollbar       { width: 0.25rem; }                /*  the entire scrollbar. */
-body::-webkit-scrollbar-track { background: rgb(30, 30, 36); } /* the track (progress bar) of the scrollbar */
-body::-webkit-scrollbar-thumb { background: var(--grey-white); } /* the draggable scrolling handle. */
+body::-webkit-scrollbar-track { background: rgba(13, 13, 13, 1); } /* the track (progress bar) of the scrollbar */
+body::-webkit-scrollbar-thumb { background: rgba(var(--secondary-color), 1); } /* the draggable scrolling handle. */
+
+/* General CSS */
+html, body, header, footer { width: 100%; }
 
 html { 
-<<<<<<< HEAD
     font-size: 16px;
     font-family: 'Product Sans', sans-serif; 
     letter-spacing: 1px;
     line-height: 1.4; 
-    color: rgba(var(--primary-color), 1); 
-=======
-    color: rgba(var(--secondary-color), 1); 
->>>>>>> parent of 0d07c4a (Update 27 February)
+    color: rgba(var(--primary-color), 1);
     background-color: var(--bg-color);
     scroll-behavior: smooth;
-    line-height: 1.4;   
 }
-
-ion-icon { font-size: 1rem; }
-ul { list-style: none; }
-a { 
-    text-decoration: none; 
-    color: rgba(var(--secondary-color), 1); 
-    transition: var(--transition-speed-1); 
-}
-a:hover { color: rgba(var(--primary-color), 1); }
 
 /* Header & Footer Container CSS */
-header, body, footer {
+header, footer {
     position: fixed;
     width: 88vw;
     left: 6vw;
@@ -60,6 +57,10 @@ header, body, footer {
 }
 header { top: 3rem; }
 footer { bottom: 3rem; }
+
+.container  {
+    width: 88vw;
+}
 
 /* Header & Footer CSS */
 header nav, footer nav {
@@ -165,7 +166,9 @@ footer .social p:after {
 footer .social p:hover:after {
     width: 100%;
 }
-
+footer .social ion-icon {
+    display: none;
+}
 @media screen and (max-width: 680px) {
     footer .social p {
         display: none;
@@ -175,3 +178,14 @@ footer .social p:hover:after {
         font-size: 1.25rem;
     }
 }
+
+/* Ionic Icons CSS */
+ion-icon { font-size: 1rem; }
+
+/* Link CSS */
+.link { 
+    text-decoration: none; 
+    color: rgba(var(--secondary-color), 1); 
+    transition: var(--transition-speed-1); 
+}
+.link:hover { color: rgba(var(--primary-color), 1); }

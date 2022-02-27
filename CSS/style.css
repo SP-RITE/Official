@@ -27,38 +27,45 @@ h5 { font-size: 1.25rem; }
 h5 { font-size: 1rem;    }
 p  { font-size: 1rem;    }
 
-/* Listing CSS */
-ul { list-style: none; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0.5rem 0;
+}
 
-/* Scrollbar CSS */
-body::-webkit-scrollbar       { width: 0.25rem; }                /*  the entire scrollbar. */
-body::-webkit-scrollbar-track { background: rgba(13, 13, 13, 1); } /* the track (progress bar) of the scrollbar */
-body::-webkit-scrollbar-thumb { background: rgba(var(--secondary-color), 1); } /* the draggable scrolling handle. */
+
+/* Listing */
+ul { list-style: none; }
 
 /* General CSS */
 html, body, header, footer { width: 100%; }
 
+/* HTML CSS */
 html { 
     font-size: 16px;
     font-family: 'Product Sans', sans-serif; 
     letter-spacing: 1px;
     line-height: 1.4; 
-    color: rgba(var(--primary-color), 1);
+    color: rgba(var(--secondary-color), 1); 
     background-color: var(--bg-color);
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  
 }
+
+/* Scrollbar CSS */
+body::-webkit-scrollbar       { width: 0.25rem; }                /*  the entire scrollbar. */
+body::-webkit-scrollbar-track { background: rgb(30, 30, 36); } /* the track (progress bar) of the scrollbar */
+body::-webkit-scrollbar-thumb { background: var(--grey-white); } /* the draggable scrolling handle. */
 
 /* Header & Footer Container CSS */
 header, footer {
     position: fixed;
-    width: 88vw;
-    left: 6vw;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
     overflow-x: hidden;
 }
-header { top: 3rem; }
-footer { bottom: 3rem; }
+header { top: 0; }
+footer { bottom: 0; }
 
-.container  {
+.container {
     width: 88vw;
 }
 
@@ -95,7 +102,7 @@ header .menu-bar {
     height: 0.25rem;
     border-radius: 0.125rem;
     background-color: rgba(var(--primary-color), 1);
-    transition: 0.4s ease-in-out;
+    transition: var(--transition-speed-1);
 }
 .toggle .bar1 {
     transform: rotatez(45deg) translate(0px, 0.313rem);
@@ -112,36 +119,43 @@ header .menu-bar {
 }
 
 /* Dropdown CSS */
+#active p{
+    color: rgba(var(--primary-color), 1);
+}
 header .dropdown {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    top: 25%;
-    width: 100%;
+    float: right;
     height: 0;
+    width: calc(10rem + 1.25rem);
     overflow: hidden;
     text-align: center;
+    transition: var(--transition-speed-1);
 }
-header.toggle > .dropdown {
+header.toggle .dropdown {
     height: calc(3.75rem * 6);
 }
 header .dropdown a {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     height: 3.75rem;
-    color: rgba(var(--theme-color), 1);
     z-index: 99;
 }
 header .dropdown p {
     font-weight: 700;
+    color: rgba(var(--secondary-color), 0.8);
     transition: var(--transition-speed-2);
 }
-header .dropdown a:hover > p {
+header .dropdown a:hover > p, #active:hover p {
+    color: rgba(var(--theme-color), 1);
     transform: translateX(-1.25rem);
 }
 
 /* Footer CSS */
 footer nav {
-    margin: 0.5rem;
+    margin: 0.5rem 0;
 }
 footer .copyright {
     user-select: none;
@@ -151,6 +165,11 @@ footer .social {
     gap: 3.75rem;
 }
 footer .social p {
+    display: block;
+    position: relative;
+}
+footer .social ion-icon {
+    display: none;
     position: relative;
 }
 footer .social p:after {
@@ -158,7 +177,7 @@ footer .social p:after {
     height: 2px;
     width: 0;
     left: 0;
-    top: 20px;
+    top: 1.25rem;
     content: "";
     background-color: rgba(var(--theme-color), 1);
     transition: var(--transition-speed-1);
@@ -166,9 +185,7 @@ footer .social p:after {
 footer .social p:hover:after {
     width: 100%;
 }
-footer .social ion-icon {
-    display: none;
-}
+
 @media screen and (max-width: 680px) {
     footer .social p {
         display: none;
@@ -182,10 +199,12 @@ footer .social ion-icon {
 /* Ionic Icons CSS */
 ion-icon { font-size: 1rem; }
 
-/* Link CSS */
+/* Link Class CSS */
 .link { 
     text-decoration: none; 
     color: rgba(var(--secondary-color), 1); 
     transition: var(--transition-speed-1); 
 }
-.link:hover { color: rgba(var(--primary-color), 1); }
+.link:hover { 
+    color: rgba(var(--primary-color), 1); 
+}

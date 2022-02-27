@@ -1,3 +1,8 @@
+<<<<<<< HEAD:CSS/slides.css
+=======
+html { overflow-y: hidden; }
+
+>>>>>>> parent of e822b7d (Update 24 February):CSS/header.css
 /* Slideshow CSS */
 .slideshow {
     display: flex;
@@ -42,6 +47,12 @@
 .slides .title h {
     font-size: calc(2.5rem + 9.6vw);
 }
+@media screen and (max-width: 1360px) {
+    .slideshow .hero-circle {
+        width: 450px;
+        height: 450px;
+    }
+}
 
 /* Arrow Buttons CSS*/
 .arrows {
@@ -58,15 +69,9 @@
     cursor: pointer;
     transition: var(--transition-speed-1);
 }
-.arrows > a:hover { 
-    background-color: rgba(var(--theme-color), 1); 
-}
-.arrows .next { 
-    border-radius: 0.375rem 0 0 0.375rem; 
-}
-.arrows .prev { 
-    border-radius: 0 0.375rem 0.375rem 0; 
-}
+.arrows > a:hover { background-color: rgba(var(--theme-color), 1); }
+.arrows .next { border-radius: 0.375rem 0 0 0.375rem; }
+.arrows .prev { border-radius: 0 0.375rem 0.375rem 0; }
 
 /* Dots CSS */
 .dot-nav {
@@ -74,7 +79,7 @@
     justify-content: center;
     gap: 1.5rem;
     position: absolute;
-    bottom: calc(3rem + 0.5rem);
+    bottom: 3rem;
     z-index: 1;
 }
 .dot-nav > a {
@@ -91,6 +96,7 @@
     background-color: rgba(var(--primary-color), 1);
     transform: scale(2);
 }
+<<<<<<< HEAD:CSS/slides.css
 .dot-nav a:hover, .dot-nav a.active:hover { 
     border: 1px solid rgba(var(--primary-color), 1); 
 }
@@ -107,3 +113,6 @@
         font-size: calc(8rem);
     }
 }
+=======
+.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1) ; }
+>>>>>>> parent of e822b7d (Update 24 February):CSS/header.css

@@ -18,7 +18,6 @@
     font-size: calc(8px + (16 - 10) * ((100vw - 320px) / (1360 - 320)));
 }
 
-<<<<<<< HEAD
 /* Text Sizing */
 h1 { font-size: 2.5rem;  }
 h2 { font-size: 2rem;    }
@@ -35,11 +34,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* Listing */
 ul { list-style: none; }
-=======
-body::-webkit-scrollbar       { width: 0.25rem; }                /*  the entire scrollbar. */
-body::-webkit-scrollbar-track { background: rgb(30, 30, 36); } /* the track (progress bar) of the scrollbar */
-body::-webkit-scrollbar-thumb { background: var(--grey-white); } /* the draggable scrolling handle. */
->>>>>>> parent of e822b7d (Update 24 February)
 
 /* General CSS */
 html, body, header, footer { width: 100%; }
@@ -52,13 +46,7 @@ html {
     line-height: 1.4; 
     color: rgba(var(--primary-color), 1); 
     background-color: var(--bg-color);
-<<<<<<< HEAD
     scroll-behavior: smooth;  
-=======
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    line-height: 1.4;
->>>>>>> parent of e822b7d (Update 24 February)
 }
 
 /* Scrollbar CSS */
@@ -69,15 +57,10 @@ body::-webkit-scrollbar-thumb { background: var(--grey-white); } /* the draggabl
 /* Header & Footer Container CSS */
 header, footer {
     position: fixed;
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     margin: 3rem 0;
     overflow-x: hidden;
-=======
-    width: 88vw;
-    left: 6vw;
->>>>>>> parent of e822b7d (Update 24 February)
 }
 header { top: 0; }
 footer { bottom: 0; }
@@ -136,16 +119,9 @@ header .menu-bar {
 }
 
 /* Dropdown CSS */
-<<<<<<< HEAD
 #active p{
     color: rgba(var(--primary-color), 1);
 }
-=======
-header .toggle .dropdown {
-    height: 100%;
-}
-/* Dropdown CSS */
->>>>>>> parent of e822b7d (Update 24 February)
 header .dropdown {
     position: relative;
     top: 25%;
@@ -154,23 +130,13 @@ header .dropdown {
     overflow: hidden;
     text-align: center;
 }
-<<<<<<< HEAD
 header.toggle .dropdown {
     height: calc(3.75rem * 6);
-=======
-header .toggle .dropdown {
-    height: 360px;;
-}
-header .dropdown li {
-    display: flex;
-    justify-content: center;
->>>>>>> parent of e822b7d (Update 24 February)
 }
 header .dropdown a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-<<<<<<< HEAD
     height: 3.75rem;
     z-index: 99;
 }
@@ -188,17 +154,6 @@ header .dropdown a:hover > p, #active:hover p {
 footer nav {
     margin: 0.5rem 0;
 }
-=======
-    height: 60px;
-    width: 100%;
-    color: rgba(var(--theme-color), 1);
-}
-header.toggle > .dropdown {
-    height: 360px;
-}
-
-/* Footer CSS */
->>>>>>> parent of e822b7d (Update 24 February)
 footer .copyright {
     user-select: none;
 }
@@ -221,7 +176,6 @@ footer .social p:after {
 }
 footer .social p:hover:after {
     width: 100%;
-<<<<<<< HEAD
 }
 
 @media screen and (max-width: 680px) {
@@ -245,6 +199,4 @@ ion-icon { font-size: 1rem; }
 }
 .link:hover { 
     color: rgba(var(--primary-color), 1); 
-=======
->>>>>>> parent of e822b7d (Update 24 February)
 }

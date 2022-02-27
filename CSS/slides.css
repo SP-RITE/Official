@@ -1,8 +1,3 @@
-<<<<<<< HEAD:CSS/slides.css
-=======
-html { overflow-y: hidden; }
-
->>>>>>> parent of e822b7d (Update 24 February):CSS/header.css
 /* Slideshow CSS */
 .slideshow {
     display: flex;
@@ -96,7 +91,6 @@ html { overflow-y: hidden; }
     background-color: rgba(var(--primary-color), 1);
     transform: scale(2);
 }
-<<<<<<< HEAD:CSS/slides.css
 .dot-nav a:hover, .dot-nav a.active:hover { 
     border: 1px solid rgba(var(--primary-color), 1); 
 }
@@ -113,6 +107,3 @@ html { overflow-y: hidden; }
         font-size: calc(8rem);
     }
 }
-=======
-.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1) ; }
->>>>>>> parent of e822b7d (Update 24 February):CSS/header.css

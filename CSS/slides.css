@@ -1,16 +1,24 @@
+body {
+    position: fixed;
+}
+
 .slideshow {
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
+}
+.slides {
+    display: flex;
+    align-items: center;
     height: 100vh;
 }
-.slideshow .content {
+.slides .content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.slideshow .hero-circle {
+.slides .hero-circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,13 +27,13 @@
     border-radius: 50%;
     border: 0.375rem solid rgba(var(--theme-color), 0.8);
 }
-.slideshow .hero-circle img {
+.slides .hero-circle img {
     padding: 1.5rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.slideshow .captions {
+.slides .captions {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -34,8 +42,21 @@
     color: rgba(var(--primary-color), 0.8);
     z-index: 1;
 }
-.slideshow .title h {
+.slides .title h {
     font-size: calc(2.5rem + 9.6vw);
+}
+@media screen and (max-width: 1360px) {
+    .slides .hero-circle {
+        width: 415px;
+        height: 415px;
+        overflow: hidden;
+    }
+    .slides .captions {
+        bottom: calc(8rem + 10vh);
+    }
+    .slides .title h1 {
+        font-size: calc(8rem);
+    }
 }
 
 /* Arrow Buttons CSS*/
@@ -89,20 +110,4 @@
 }
 .dot-nav a:hover, .dot-nav a.active:hover { 
     border: 1px solid rgba(var(--primary-color), 1); 
-}
-
-@media screen and (max-width: 1360px) {
-    .slideshow .hero-circle {
-        width: 415px;
-        height: 415px;
-    }
-    .slideshow .captions {
-        bottom: calc(8rem + 10vh);
-    }
-    .slideshow .title h {
-        font-size: calc(8rem);
-    }
-    .dot-nav {
-        bottom: none;
-    }
 }

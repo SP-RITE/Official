@@ -51,7 +51,7 @@ html {
 
 /* Scrollbar CSS */
 body::-webkit-scrollbar       { width: 0.25rem; }                /*  the entire scrollbar. */
-body::-webkit-scrollbar-track { background: rgb(30, 30, 36); } /* the track (progress bar) of the scrollbar */
+body::-webkit-scrollbar-track { background: rgba(13, 13, 13, 1); } /* the track (progress bar) of the scrollbar */
 body::-webkit-scrollbar-thumb { background: var(--grey-white); } /* the draggable scrolling handle. */
 
 /* Header & Footer Container CSS */
@@ -60,7 +60,6 @@ header, footer {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
-    overflow-x: hidden;
 }
 header { top: 0; }
 footer { bottom: 0; }

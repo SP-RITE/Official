@@ -1,11 +1,25 @@
+<<<<<<< HEAD:CSS/slides.css
 /* Slideshow CSS */
 .slideshow {
+=======
+body {
+    width: 100vw;
+    left: 0;
+}
+
+/* Slideshow CSS */
+.slideshow-container {
+>>>>>>> parent of 0d07c4a (Update 27 February):CSS/header.css
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
 }
+<<<<<<< HEAD:CSS/slides.css
 .slides {
+=======
+.slideshow {
+>>>>>>> parent of 0d07c4a (Update 27 February):CSS/header.css
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +53,13 @@
     color: rgba(var(--primary-color), 0.8);
     z-index: 1;
 }
+<<<<<<< HEAD:CSS/slides.css
 .slides .title h {
     font-size: calc(2.5rem + 9.6vw);
+=======
+.slideshow .title h {
+    font-size: calc(0.875rem + 9.6vw);
+>>>>>>> parent of 0d07c4a (Update 27 February):CSS/header.css
 }
 @media screen and (max-width: 1360px) {
     .slideshow .hero-circle {
@@ -84,16 +103,14 @@
     margin: calc(0.875rem - 0.5rem);
     border-radius: 50%;
     border: 1px solid rgba(var(--secondary-color), 1) ;
-    transition: var(--transition-speed-1);
+    transition: background-color var(--transition-speed-1);
 }
 .dot-nav a.active {
-    border: 1px solid rgba(var(--secondary-color), 1);
+    border: 1px solid rgba(var(--primary-color), 1);
     background-color: rgba(var(--primary-color), 1);
     transform: scale(2);
 }
-.dot-nav a:hover, .dot-nav a.active:hover { 
-    border: 1px solid rgba(var(--primary-color), 1); 
-}
+.dot-nav a:hover { border: 1px solid rgba(var(--primary-color), 1); }
 
 @media screen and (max-width: 1360px) {
     .slideshow .hero-circle {
